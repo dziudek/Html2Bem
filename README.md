@@ -1,5 +1,7 @@
 # Html2Bem
 
+[>>> Html2Bem v.0.3 <<<](http://dziudek.github.io/Html2Bem/)
+
 Simple HTML to BEM converter - creates CSS/LESS code based on your HTML files and the BEM convention.
 
 ## Changelog
