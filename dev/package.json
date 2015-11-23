@@ -1,0 +1,22 @@
+{
+  "name": "bem2less",
+  "version": "0.1.0",
+  "description": "Simple HTML to BEM parser",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "author": "Dziudek",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "jasmine-core": "^2.3.4",
+    "jasmine-node": "^1.14.5",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-jasmine": "^0.3.6"
+  }
+}

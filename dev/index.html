@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML 2 BEM</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<main class="app">
+		<div class="app__wrapper">
+			<h1 class="app__header">
+				HTML 2 BEM
+				<small class="app__version">v.0.3</small>
+			</h1>
+			<label class="app__option filter">
+				Filter: <input class="filter__input" value="" placeholder="Put filter for CSS classes" />
+			</label>
+
+			<div class="app__option mode">
+				<strong class="mode__name">Select mode:</strong>
+				<label class="mode__label">
+					<input type="radio" class="mode__input" name="outputLanguage" value="less" checked />LESS
+				</label>
+				<label class="mode__label">
+					<input type="radio" class="mode__input" name="outputLanguage" value="css" />CSS
+				</label>
+			</div><!-- .app__option.outputLanguage -->
+
+			<div class="app__option indent">
+				<strong class="indent__name">Select indent:</strong>
+
+				<select name="character" class="indent__input indent__input--type">
+					<option value="tabs" selected>Tabs</option>
+					<option value="spaces">Spaces</option>
+				</select><!-- .indent__input -->
+
+				<select name="length" class="indent__input indent__input--length">
+					<option value="1" selected>1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select><!-- .indent__input -->
+			</div><!-- .app__option.indent -->
+
+			<div class="app__textareas">
+				<textarea class="app__input" placeholder="Paste your HTML code here..."></textarea>
+				<textarea class="app__output" readonly placeholder="Your BEM classes will appear here..."></textarea>
+			</div>
+		</div><!-- .app__wrapper -->
+	</main><!-- .app -->
+
+    <script src="js/string.helper.js"></script>
+    <script src="js/array.helper.js"></script>
+    <script src="js/less.parser.js"></script>
+    <script src="js/css.parser.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
