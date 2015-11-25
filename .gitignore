@@ -1,5 +1,6 @@
 *~
 .idea
 .DS_Store
+.coveralls.yml
 npm-debug.log
 dev/node_modules
