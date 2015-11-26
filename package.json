@@ -1,8 +1,9 @@
 {
-  "name": "bem2less",
+  "name": "Html2Bem",
   "version": "0.1.0",
   "description": "Simple HTML to BEM parser",
   "main": "gulpfile.js",
+  "repository": "https://github.com/dziudek/Html2Bem",
   "directories": {
     "test": "spec"
   },
