@@ -12,7 +12,7 @@
 		<div class="app__wrapper">
 			<h1 class="app__header">
 				HTML 2 BEM
-				<small class="app__version">v.0.3</small>
+				<small class="app__version">v.0.4</small>
 			</h1>
 			<label class="app__option filter">
 				Filter: <input class="filter__input" value="" placeholder="Put filter for CSS classes" />
@@ -23,7 +23,10 @@
 				<label class="mode__label">
 					<input type="radio" class="mode__input" name="outputLanguage" value="less" checked />LESS
 				</label>
-				<label class="mode__label">
+                <label class="mode__label">
+                    <input type="radio" class="mode__input" name="outputLanguage" value="sass" />Sass
+                </label>
+                <label class="mode__label">
 					<input type="radio" class="mode__input" name="outputLanguage" value="css" />CSS
 				</label>
 			</div><!-- .app__option.outputLanguage -->
@@ -56,6 +59,7 @@
     <script src="js/array.helper.js"></script>
     <script src="js/less.parser.js"></script>
     <script src="js/css.parser.js"></script>
+    <script src="js/sass.parser.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
