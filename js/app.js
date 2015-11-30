@@ -21,9 +21,13 @@ Html2Bem.prototype.initializeUI = function () {
     var modeSelection = document.getElementsByName('outputLanguage');
     var indentOptions = document.querySelector('.indent');
 
-    if (this.outputLanguage !== 'less') {
-        modeSelection[1].checked = true;
+    if (this.outputLanguage === 'css') {
+        modeSelection[2].checked = true;
         indentOptions.classList.add('indent--hidden');
+    }
+
+    if (this.outputLanguage === 'sass') {
+        modeSelection[1].checked = true;
     }
 
     if (this.indentLength > 1) {
@@ -65,6 +69,13 @@ Html2Bem.prototype.initializeUI = function () {
 
     modeSelection[1].addEventListener('click', function () {
         self.outputLanguage = modeSelection[1].value;
+        outputField.value = self.findCssClasses();
+        localStorage.setItem('bem-outputLanguage', self.outputLanguage);
+        indentOptions.classList.remove('indent--hidden');
+    }, false);
+
+    modeSelection[2].addEventListener('click', function () {
+        self.outputLanguage = modeSelection[2].value;
         outputField.value = self.findCssClasses();
         localStorage.setItem('bem-outputLanguage', self.outputLanguage);
         indentOptions.classList.add('indent--hidden');
