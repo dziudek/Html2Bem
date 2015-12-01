@@ -125,7 +125,7 @@ Html2Bem.prototype.getParserClassName = function() {
 
 Html2Bem.prototype.runCssClassesFilter = function() {
     if (this.selectorFilterValue !== '') {
-        return this.parsingResults.filter(this.filterCssClasses);
+        return this.parsingResults.filter(this.filterCssClasses.bind(this));
     }
 
     return this.parsingResults;
