@@ -35,7 +35,8 @@ LessParser.prototype.deeperLevels = function(iteration) {
             break;
         } else {
             this.parentStack.pop();
-            this.outputLESS += this.stringHelper.addIndent(this.parentStack.length) + '}' + "\n";
+            var indentation = this.parentStack.length < 1 ? this.parentStack.length - 1 : this.parentStack.length;
+            this.outputLESS += this.stringHelper.addIndent(indentation) + '}' + "\n";
         }
     }
 
